@@ -1,9 +1,12 @@
 package com.nopecommerce.pages;
 
+import com.aventstack.extentreports.Status;
+import com.nopecommerce.customlisteners.CustomListeners;
 import com.nopecommerce.utility.Utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 public class CheckOutPage extends Utility {
 
@@ -87,6 +90,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterFirstname(String value) throws InterruptedException {
+        Reporter.log("enter Firstname " + firstName.toString());
+        CustomListeners.test.log(Status.PASS, "enter Firstname  " + firstName);
         Thread.sleep(1000);
         sendTextToElement(firstName, value);
     }
@@ -98,6 +103,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterLastname(String value) throws InterruptedException {
+        Reporter.log("enter Lastname " + lastName.toString());
+        CustomListeners.test.log(Status.PASS, "enter Lastname  " + lastName);
         Thread.sleep(1000);
         sendTextToElement(lastName, value);
     }
@@ -109,6 +116,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterEmail(String value) throws InterruptedException {
+        Reporter.log("enter Email " + email.toString());
+        CustomListeners.test.log(Status.PASS, "enter Email  " + email);
         Thread.sleep(1000);
         sendTextToElement(email, value);
     }
@@ -120,6 +129,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void selectCountry(String value) throws InterruptedException {
+        Reporter.log("select Country " + email.toString());
+        CustomListeners.test.log(Status.PASS, "select Country  " + email);
         Thread.sleep(1000);
         selectByVisibleTextFromDropDown(country, value);
     }
@@ -131,6 +142,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterCity(String value) throws InterruptedException {
+        Reporter.log("enter City " + city.toString());
+        CustomListeners.test.log(Status.PASS, "enter City  " + city);
         Thread.sleep(1000);
         sendTextToElement(city, value);
     }
@@ -142,6 +155,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterAddress1(String value) throws InterruptedException {
+        Reporter.log("enter Address1 " + address1.toString());
+        CustomListeners.test.log(Status.PASS, "enter Address1  " + address1);
         Thread.sleep(1000);
         sendTextToElement(address1, value);
     }
@@ -153,6 +168,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterZipCode(String value) throws InterruptedException {
+        Reporter.log("enter Address1 " + zipCode.toString());
+        CustomListeners.test.log(Status.PASS, "enter Address1  " + zipCode);
         Thread.sleep(1000);
         sendTextToElement(zipCode, value);
     }
@@ -164,6 +181,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterPhoneNumber(String value) throws InterruptedException {
+        Reporter.log("enter Phone Number " + phoneNumber.toString());
+        CustomListeners.test.log(Status.PASS, "enter Phone Number  " + phoneNumber);
         Thread.sleep(1000);
         sendTextToElement(phoneNumber, value);
     }
@@ -174,6 +193,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnContinue() throws InterruptedException {
+        Reporter.log("click On Continue " + continueButton.toString());
+        CustomListeners.test.log(Status.PASS, "click On Continue  " + continueButton);
         Thread.sleep(1000);
         clickOnElement(continueButton);
     }
@@ -184,6 +205,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void selectNextDayAir() throws InterruptedException {
+        Reporter.log("select Next DayAir " + nextDayAir.toString());
+        CustomListeners.test.log(Status.PASS, "select Next DayAir  " + nextDayAir);
         Thread.sleep(1000);
         clickOnElement(nextDayAir);
     }
@@ -194,6 +217,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnShippingContinue() throws InterruptedException {
+        Reporter.log("click On Shipping Continue " + shippingContinueButton.toString());
+        CustomListeners.test.log(Status.PASS, "click On Shipping Continue  " + shippingContinueButton);
         Thread.sleep(1000);
         clickOnElement(shippingContinueButton);
     }
@@ -204,6 +229,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnCreditCard() throws InterruptedException {
+        Reporter.log("click On CreditCard " + creditCard.toString());
+        CustomListeners.test.log(Status.PASS, "click On CreditCard  " + creditCard);
         Thread.sleep(1000);
         clickOnElement(creditCard);
     }
@@ -214,6 +241,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnPaymentContinue() throws InterruptedException {
+        Reporter.log("click On Payment Continue " + paymentContinueButton.toString());
+        CustomListeners.test.log(Status.PASS, "click On Payment Continue  " + paymentContinueButton);
         Thread.sleep(1000);
         clickOnElement(paymentContinueButton);
     }
@@ -225,6 +254,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void selectCreditCardType(String value) throws InterruptedException {
+        Reporter.log("select CreditCard Type " + creditCardType.toString());
+        CustomListeners.test.log(Status.PASS, "select CreditCard Type  " + creditCardType);
         Thread.sleep(1000);
         selectByVisibleTextFromDropDown(creditCardType, value);
     }
@@ -236,6 +267,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterCardHolderName(String value) throws InterruptedException {
+        Reporter.log("enter Card Holder Name " + cardHolderName.toString());
+        CustomListeners.test.log(Status.PASS, "enter Card Holder Name  " + cardHolderName);
         Thread.sleep(1000);
         sendTextToElement(cardHolderName, value);
     }
@@ -247,6 +280,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterCardNumber(String value) throws InterruptedException {
+        Reporter.log(" enter CardNumber " + cardNumber.toString());
+        CustomListeners.test.log(Status.PASS, " enter CardNumber  " + cardNumber);
         Thread.sleep(1000);
         sendTextToElement(cardNumber, value);
     }
@@ -259,6 +294,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void selectExpirationDate(String month, String year) throws InterruptedException {
+        CustomListeners.test.log(Status.PASS, " select Expiration Date ");
+        selectByVisibleTextFromDropDown(selectMonth, month);
         Thread.sleep(1000);
         selectByVisibleTextFromDropDown(selectMonth, month);
         selectByVisibleTextFromDropDown(selectYear, year);
@@ -271,6 +308,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void enterCardCode(String value) throws InterruptedException {
+        Reporter.log("enter CardCode ");
+        CustomListeners.test.log(Status.PASS, "enter CardCode ");
         Thread.sleep(1000);
         sendTextToElement(cardCode, value);
     }
@@ -282,6 +321,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public String getPaymentTypeText() throws InterruptedException {
+        Reporter.log("get Payment Type Text " + paymentTypeMessage.toString());
+        CustomListeners.test.log(Status.PASS, "get Payment Type Text " + paymentTypeMessage);
         Thread.sleep(1000);
         return getTextFromElement(paymentTypeMessage);
     }
@@ -293,6 +334,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public String getShippingMethodText() throws InterruptedException {
+        Reporter.log("get Shipping Method Text " + shippingMethodText.toString());
+        CustomListeners.test.log(Status.PASS, "get Shipping Method Text " + shippingMethodText);
         Thread.sleep(1000);
         return getTextFromElement(shippingMethodText);
     }
@@ -304,6 +347,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public String getTotalPriceText() throws InterruptedException {
+        Reporter.log("get Total PriceText " + totalPriceText.toString());
+        CustomListeners.test.log(Status.PASS, "get Total PriceText " + totalPriceText);
         Thread.sleep(1000);
         return getTextFromElement(totalPriceText);
     }
@@ -314,6 +359,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnConfirm() throws InterruptedException {
+        Reporter.log("click On Confirm " + confirmButton.toString());
+        CustomListeners.test.log(Status.PASS, "click On Confirm " + confirmButton);
         Thread.sleep(1000);
         clickOnElement(confirmButton);
     }
@@ -324,6 +371,8 @@ public class CheckOutPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnPaymentInfoContinue() throws InterruptedException {
+        Reporter.log("click On Payment Info Continue " + paymentInfoContinueButton.toString());
+        CustomListeners.test.log(Status.PASS, "click On Payment Info Continue " + paymentInfoContinueButton);
         Thread.sleep(1000);
         clickOnElement(paymentInfoContinueButton);
     }

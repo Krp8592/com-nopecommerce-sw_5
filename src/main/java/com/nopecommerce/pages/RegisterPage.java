@@ -1,9 +1,12 @@
 package com.nopecommerce.pages;
 
+import com.aventstack.extentreports.Status;
+import com.nopecommerce.customlisteners.CustomListeners;
 import com.nopecommerce.utility.Utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 public class RegisterPage extends Utility {
 
@@ -35,6 +38,8 @@ public class RegisterPage extends Utility {
      * @throws InterruptedException
      */
     public void enterFirstname(String value) throws InterruptedException {
+        Reporter.log("enter Firstname " + firstName.toString());
+        CustomListeners.test.log(Status.PASS,"enter Firstname " + firstName);
         Thread.sleep(1000);
         sendTextToElement(firstName,value);
     }
@@ -45,6 +50,8 @@ public class RegisterPage extends Utility {
      * @throws InterruptedException
      */
     public void enterLastname(String value) throws InterruptedException {
+        Reporter.log("enter Lastname " + lastName.toString());
+        CustomListeners.test.log(Status.PASS,"enter Lastname " + lastName);
         Thread.sleep(1000);
         sendTextToElement(lastName,value);
     }
@@ -55,6 +62,8 @@ public class RegisterPage extends Utility {
      * @throws InterruptedException
      */
     public void enterEmail(String value) throws InterruptedException {
+        Reporter.log("enter Email " + email.toString());
+        CustomListeners.test.log(Status.PASS,"enter Email " + email);
         Thread.sleep(1000);
         sendTextToElement(email,value);
     }
@@ -65,6 +74,8 @@ public class RegisterPage extends Utility {
      * @throws InterruptedException
      */
     public void enterPassword(String value) throws InterruptedException {
+        Reporter.log("enter Password " + password.toString());
+        CustomListeners.test.log(Status.PASS,"enter Password " + password);
         Thread.sleep(1000);
         sendTextToElement(password,value);
     }
@@ -75,6 +86,8 @@ public class RegisterPage extends Utility {
      * @throws InterruptedException
      */
     public void enterConfirmPassword(String value) throws InterruptedException {
+        Reporter.log("enter Confirm Password " + confirmpassword.toString());
+        CustomListeners.test.log(Status.PASS,"enter Confirm Password " + confirmpassword);
         Thread.sleep(1000);
         sendTextToElement(confirmpassword,value);
     }
@@ -84,6 +97,8 @@ public class RegisterPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnRegisterButton() throws InterruptedException {
+        Reporter.log("click On Register Button " + registerButton.toString());
+        CustomListeners.test.log(Status.PASS,"click On Register Button " + registerButton);
         Thread.sleep(1000);
         clickOnElement(registerButton);
     }
@@ -94,6 +109,8 @@ public class RegisterPage extends Utility {
      * @throws InterruptedException
      */
     public String getRegistrationCompletedText() throws InterruptedException {
+        Reporter.log("get Registration Completed Text " + registrationCompleted.toString());
+        CustomListeners.test.log(Status.PASS,"get Registration Completed Text " + registrationCompleted);
         Thread.sleep(1000);
         return getTextFromElement(registrationCompleted);
     }

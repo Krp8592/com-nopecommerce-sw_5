@@ -1,10 +1,13 @@
 package com.nopecommerce.pages;
 
+import com.aventstack.extentreports.Status;
+import com.nopecommerce.customlisteners.CustomListeners;
 import com.nopecommerce.utility.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 public class BuildYourOwnComputerPage extends Utility {
 
@@ -45,6 +48,8 @@ public class BuildYourOwnComputerPage extends Utility {
     WebElement goToCart;
 
     public String getBuildYourOwnComputerText() throws InterruptedException {
+        Reporter.log("Getting text from element " + buildYourOwnComputerText.toString());
+        CustomListeners.test.log(Status.PASS, "Getting text from element " + buildYourOwnComputerText.toString());
         Thread.sleep(1000);
         return getTextFromElement(buildYourOwnComputerText);
     }
@@ -56,6 +61,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void selectProcessor(String name) throws InterruptedException {
+        Reporter.log("Select processor" + selectProcessor.toString());
+        CustomListeners.test.log(Status.PASS, "Select processor " + selectProcessor.toString());
         Thread.sleep(1000);
         selectByVisibleTextFromDropDown(selectProcessor, name);
     }
@@ -67,6 +74,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void selectRam(String name) throws InterruptedException {
+        Reporter.log("Select Ram" + selectRam.toString());
+        CustomListeners.test.log(Status.PASS, "Select processor " + selectRam.toString());
         Thread.sleep(1000);
         selectByVisibleTextFromDropDown(selectRam, name);
     }
@@ -78,6 +87,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void selectHDD(String value) throws InterruptedException {
+        Reporter.log("Select HDD");
+        CustomListeners.test.log(Status.PASS, "Select HDD ");
         Thread.sleep(1000);
         clickOnElement(By.xpath("//label[normalize-space()='" + value + "']"));
     }
@@ -99,6 +110,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void selectMicrosoftOfficeSoftwareOption() {
+        Reporter.log("Selecting microsoft software" + microsoftOfficeSoftwareOption.toString());
+        CustomListeners.test.log(Status.PASS, "Selecting microsoft software " + microsoftOfficeSoftwareOption.toString());
         selectCheckBox((WebElement) microsoftOfficeSoftwareOption);
     }
 
@@ -108,6 +121,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void selectTotalCommanderSoftwareOption() throws InterruptedException {
+        Reporter.log("Select total commander" + totalCommanderSoftwareOption.toString());
+        CustomListeners.test.log(Status.PASS, "Selecting total commander " + totalCommanderSoftwareOption.toString());
         Thread.sleep(1000);
         selectCheckBox((WebElement) totalCommanderSoftwareOption);
     }
@@ -119,6 +134,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public String getTotalPriceText() throws InterruptedException {
+        Reporter.log("Getting text from element" + totalPrice.toString());
+        CustomListeners.test.log(Status.PASS, "Getting text from element " + totalPrice.toString());
         Thread.sleep(1000);
         return getTextFromElement(totalPrice);
     }
@@ -129,6 +146,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnAddtoCart() throws InterruptedException {
+        Reporter.log("Adding item to cart" + addToCart.toString());
+        CustomListeners.test.log(Status.PASS, "Adding item to cart " + addToCart.toString());
         Thread.sleep(1000);
         clickOnElement(addToCart);
     }
@@ -140,6 +159,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public String getSuccessfullAddedToCartText() throws InterruptedException {
+        Reporter.log("Getting success message from element" + successfullyText.toString());
+        CustomListeners.test.log(Status.PASS, "Getting success message from element " + successfullyText.toString());
         Thread.sleep(1000);
         return getTextFromElement(successfullyText);
     }
@@ -150,6 +171,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void closeNotificationBar() throws InterruptedException {
+        Reporter.log("Closing notification bar " + closeNotificationBar.toString());
+        CustomListeners.test.log(Status.PASS, "Closing notification bar " + closeNotificationBar.toString());
         Thread.sleep(1000);
         clickOnElement(closeNotificationBar);
     }
@@ -160,6 +183,8 @@ public class BuildYourOwnComputerPage extends Utility {
      * @throws InterruptedException
      */
     public void mouseHoverToShoppingCartAndClickOnCart() throws InterruptedException {
+        Reporter.log("Clicking go to cart element " + goToCart.toString());
+        CustomListeners.test.log(Status.PASS, "Clicking go to cart element " + goToCart.toString());
         Thread.sleep(1000);
         mouseHoverToElement(shopingCart);
         mouseHoverToElementAndClick(goToCart);

@@ -1,9 +1,12 @@
 package com.nopecommerce.pages;
 
+import com.aventstack.extentreports.Status;
+import com.nopecommerce.customlisteners.CustomListeners;
 import com.nopecommerce.utility.Utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 public class LoginPage extends Utility {
 
@@ -20,6 +23,8 @@ public class LoginPage extends Utility {
      * @return
      */
     public String getWelcomeText(){
+        Reporter.log("get Welcome Text " + welcomeText.toString());
+        CustomListeners.test.log(Status.PASS,"get Welcome Text " + welcomeText);
         return getTextFromElement(welcomeText);
     }
 
@@ -27,6 +32,8 @@ public class LoginPage extends Utility {
      * click On Guest Checkout
      */
     public void clickOnGuestCheckout(){
+        Reporter.log("click On Guest Checkout " + guestCheckout.toString());
+        CustomListeners.test.log(Status.PASS,"click On Guest Checkout " + guestCheckout);
         clickOnElement(guestCheckout);
     }
 }

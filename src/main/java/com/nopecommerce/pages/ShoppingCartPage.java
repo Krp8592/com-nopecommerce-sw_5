@@ -1,9 +1,12 @@
 package com.nopecommerce.pages;
 
+import com.aventstack.extentreports.Status;
+import com.nopecommerce.customlisteners.CustomListeners;
 import com.nopecommerce.utility.Utility;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 public class ShoppingCartPage extends Utility {
 
@@ -42,6 +45,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public String getShoppingCartText() throws InterruptedException {
+        Reporter.log("get Shopping CartText " + shoppingCartText.toString());
+        CustomListeners.test.log(Status.PASS,"get Shopping CartText " + shoppingCartText);
         Thread.sleep(1000);
         return getTextFromElement(shoppingCartText);
     }
@@ -53,6 +58,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public String getPriceText() throws InterruptedException {
+        Reporter.log("get PriceText " + priceText.toString());
+        CustomListeners.test.log(Status.PASS,"get PriceText " + priceText);
         Thread.sleep(1000);
         return getTextFromElement(priceText);
     }
@@ -64,6 +71,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public void changeValueOfQuantity(String value) throws InterruptedException {
+        Reporter.log("change Value Of Quantity " + quantity.toString());
+        CustomListeners.test.log(Status.PASS,"change Value Of Quantity " + quantity);
         Thread.sleep(1000);
         sendTextToElement(quantity, value);
     }
@@ -74,6 +83,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public void updateShoppingCart() throws InterruptedException {
+        Reporter.log("update Shopping Cart " + updateShoppingCart.toString());
+        CustomListeners.test.log(Status.PASS," update Shopping Cart " + updateShoppingCart);
         Thread.sleep(1000);
         clickOnElement(updateShoppingCart);
     }
@@ -84,6 +95,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public void selectTermsAndCondition() throws InterruptedException {
+        Reporter.log("select Terms And Condition " + termsAndCondition.toString());
+        CustomListeners.test.log(Status.PASS,"select Terms And Condition " + termsAndCondition);
         Thread.sleep(1000);
         clickOnElement(termsAndCondition);
     }
@@ -94,6 +107,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnCheckOut() throws InterruptedException {
+        Reporter.log("click On CheckOut " + checkOut.toString());
+        CustomListeners.test.log(Status.PASS,"click On CheckOut " + checkOut);
         Thread.sleep(1000);
         clickOnElement(checkOut);
     }
@@ -104,6 +119,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public void mouseHoverToShoppingCard() throws InterruptedException {
+        Reporter.log("mouse Hover To Shopping Card " + shopingCart.toString());
+        CustomListeners.test.log(Status.PASS,"mouse Hover To Shopping Card " + shopingCart);
         Thread.sleep(1000);
         mouseHoverToElement(shopingCart);
     }
@@ -114,6 +131,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public void mouseHoverToGoToCardAndClick() throws InterruptedException {
+        Reporter.log("mouse Hover To GoTo Card And Click " + goToCart.toString());
+        CustomListeners.test.log(Status.PASS,"mouse Hover To GoTo Card And Click " + goToCart);
         Thread.sleep(1000);
         mouseHoverToElementAndClick(goToCart);
     }
@@ -125,6 +144,8 @@ public class ShoppingCartPage extends Utility {
      * @throws InterruptedException
      */
     public String getNumberOfQuantityValue() throws InterruptedException {
+        Reporter.log("get Number Of Quantity Value " + goToCart.toString());
+        CustomListeners.test.log(Status.PASS,"get Number Of Quantity Value " + goToCart);
         Thread.sleep(1000);
         return getAttributeValueFromElement(quantityValue);
     }

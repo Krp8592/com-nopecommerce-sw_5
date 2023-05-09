@@ -1,10 +1,13 @@
 package com.nopecommerce.pages;
 
+import com.aventstack.extentreports.Status;
+import com.nopecommerce.customlisteners.CustomListeners;
 import com.nopecommerce.utility.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 public class CellPhonePage extends Utility {
 
@@ -41,6 +44,8 @@ public class CellPhonePage extends Utility {
      * @throws InterruptedException
      */
     public String getCellPhoneText() throws InterruptedException {
+        Reporter.log("get Cell Phone Text " + cellPhone.toString());
+        CustomListeners.test.log(Status.PASS,"get Cell Phone Text " + cellPhone);
         Thread.sleep(1000);
         return getTextFromElement(cellPhone);
     }
@@ -49,6 +54,8 @@ public class CellPhonePage extends Utility {
      * click On List ViewIcon
      */
     public void clickOnListViewIcon() {
+        Reporter.log("click On List ViewIcon " + listView.toString());
+        CustomListeners.test.log(Status.PASS,"click On List ViewIcon " + listView.toString());
         clickOnElement(listView);
     }
 
@@ -59,6 +66,8 @@ public class CellPhonePage extends Utility {
      * @throws InterruptedException
      */
     public void selectPhoneFromList(String phone) throws InterruptedException {
+        Reporter.log("select Phone FromList " );
+        CustomListeners.test.log(Status.PASS,"select Phone FromList " );
         Thread.sleep(1000);
         clickOnElement(By.xpath("//h2[@class='product-title']//a[contains(text(),'" + phone + "')]"));
     }
@@ -70,6 +79,8 @@ public class CellPhonePage extends Utility {
      * @throws InterruptedException
      */
     public String getProductNameText() throws InterruptedException {
+        Reporter.log("get Product NameText " + ProductName.toString());
+        CustomListeners.test.log(Status.PASS,"get Product NameText " + ProductName);
         Thread.sleep(1000);
         return getTextFromElement(ProductName);
     }
@@ -81,6 +92,8 @@ public class CellPhonePage extends Utility {
      * @throws InterruptedException
      */
     public String getPriceText() throws InterruptedException {
+        Reporter.log("get PriceText " + PriceName.toString());
+        CustomListeners.test.log(Status.PASS,"get PriceText " + PriceName);
         Thread.sleep(1000);
         return getTextFromElement(PriceName);
     }
@@ -93,6 +106,8 @@ public class CellPhonePage extends Utility {
      */
     public void updateQuantity(String value) throws InterruptedException {
         Thread.sleep(1000);
+        Reporter.log("update Quantity " + updateQuantity.toString());
+        Thread.sleep(1000);
         sendTextToElement(updateQuantity, value);
     }
 
@@ -102,6 +117,8 @@ public class CellPhonePage extends Utility {
      * @throws InterruptedException
      */
     public void clickOnAddToCart() throws InterruptedException {
+        Reporter.log("click On Add ToCart " + addToCart.toString());
+        CustomListeners.test.log(Status.PASS,"click On Add ToCart " + addToCart);
         Thread.sleep(1000);
         clickOnElement(addToCart);
     }
@@ -113,6 +130,8 @@ public class CellPhonePage extends Utility {
      * @throws InterruptedException
      */
     public String getSuccessfullAddedToCartText() throws InterruptedException {
+        Reporter.log("get Successfull Added To CartText " + successfullyText.toString());
+        CustomListeners.test.log(Status.PASS,"get Successfull Added To CartText " + successfullyText);
         Thread.sleep(1000);
         return getTextFromElement(successfullyText);
     }
@@ -124,6 +143,8 @@ public class CellPhonePage extends Utility {
      */
     public void closeNotificationBar() throws InterruptedException {
         Thread.sleep(1000);
+        Reporter.log("close Notification Bar " + closeNotificationBar.toString());
+        CustomListeners.test.log(Status.PASS,"close Notification Bar " + closeNotificationBar);
         clickOnElement(closeNotificationBar);
     }
 }

@@ -1,10 +1,13 @@
 package com.nopecommerce.pages;
 
+import com.aventstack.extentreports.Status;
+import com.nopecommerce.customlisteners.CustomListeners;
 import com.nopecommerce.utility.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Reporter;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -23,6 +26,8 @@ public class ComputersPage extends Utility {
      * click On Desktop
      */
     public void clickOnDesktop(){
+        Reporter.log("click On Desktop " + desktop.toString());
+        CustomListeners.test.log(Status.PASS, "click On Desktop " + desktop);
         clickOnElement(desktop);
     }
 
@@ -32,6 +37,8 @@ public class ComputersPage extends Utility {
      * @throws InterruptedException
      */
     public void selectValueFromShortingDropDown(String text) throws InterruptedException {
+        Reporter.log("select Value From Shorting DropDown " + shortingFilterOption.toString());
+        CustomListeners.test.log(Status.PASS, "select Value From Shorting DropDown " + shortingFilterOption);
         selectByVisibleTextFromDropDown(shortingFilterOption, text);
     }
 
@@ -41,6 +48,8 @@ public class ComputersPage extends Utility {
      * @throws InterruptedException
      */
     public void clickAddtoCartByProductName(String productName) throws InterruptedException {
+        Reporter.log("click Add to Cart By ProductName " );
+        CustomListeners.test.log(Status.PASS, "click Add to Cart By ProductName " );
         Thread.sleep(1000);
         clickOnElement(By.xpath("(//h2//a[normalize-space()='"+productName+"']//following::button)[1]"));
     }
@@ -84,6 +93,8 @@ public class ComputersPage extends Utility {
      */
     public List<String> getAllProductNamesAfterShorting() throws InterruptedException {
         Thread.sleep(2000);
+        Reporter.log("Get all product name after shorting " );
+        CustomListeners.test.log(Status.PASS, "Get all product name after shorting " );
         waitUntilVisibilityOfElementLocated(By.xpath("//div[@class='picture']//img"),5);
         selectByVisibleTextFromDropDown(By.xpath("//select[@id='products-orderby']"), "Name: Z to A");
         Thread.sleep(2000);
