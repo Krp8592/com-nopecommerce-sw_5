@@ -84,6 +84,7 @@ public class Utility extends ManageBrowser {
      * This method will send text on element
      */
     public void sendTextToElement(By by, String text) {
+        driver.findElement(by).clear();
         driver.findElement(by).sendKeys(text);
     }
 

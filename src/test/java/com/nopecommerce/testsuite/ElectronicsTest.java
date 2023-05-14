@@ -117,6 +117,5 @@ public class ElectronicsTest extends BaseTest {
         System.out.println("-----------------Fail because of bug--------------------------");
         System.out.println("=================================================================");
         System.out.println("-----------------Shopping cart is getting empty--------------------------");
-
     }
 }
